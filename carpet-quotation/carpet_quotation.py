@@ -123,10 +123,11 @@ def create_quote():
     print()
 
 
-again = 'yes'
-while again == 'yes' or again == 'y':
-    create_quote()
-    print('Do you want to create another quote? (yes or no)')
-    again = input()
+if __name__ == '__main__':
+    again = 'yes'
+    while again == 'yes' or again == 'y':
+        create_quote()
+        print('Do you want to create another quote? (yes or no)')
+        again = input()
 
-print("Thank you, good bye!")
+    print("Thank you, good bye!")
