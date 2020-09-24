@@ -10,7 +10,7 @@ splash_screen = '''
 print('\n' + splash_screen)
 
 
-def input_valid_number(message, min, max):
+def input_valid_number(message: str, min: float, max: float) -> float:
     error_message = "Please enter a number between " + str(min) + " and " + str(max)
     valid = False
     while not valid:
@@ -28,18 +28,18 @@ def input_valid_number(message, min, max):
     return number
 
 
-def offer(message):
+def offer(message: str) -> bool:
     default_discount = input(message)
     return default_discount == "yes" or default_discount == "y"
 
 
-def apply_discount(price, discount):
+def apply_discount(price: float, discount: float) -> float:
     discount_amount = price * (discount / 100)
     new_price = price - discount_amount
     return new_price
 
 
-def calculate_discount_price(price, discount):
+def calculate_discount_price(price: float, discount: float) -> float:
     discount_amount = price * (discount / 100)
     print("The discount amounts to £" + str(discount_amount) + "\n")
     new_price = price - discount_amount
